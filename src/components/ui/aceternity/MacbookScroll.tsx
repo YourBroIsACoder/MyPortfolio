@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { MotionValue, useScroll, useTransform, motion } from "framer-motion";
 import { cn } from "../../../lib/utils";
 import {
@@ -25,7 +25,7 @@ export const MacbookScroll = ({
     title,
 }: {
     src?: string;
-    title?: string | React.ReactNode;
+    title?: string | ReactNode;
 }) => {
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({

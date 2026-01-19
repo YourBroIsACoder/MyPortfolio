@@ -1,7 +1,7 @@
 "use client";
 
 import { cn } from "../../../lib/utils";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const Meteors = ({
     number,
@@ -22,7 +22,7 @@ export const Meteors = ({
 
     return (
         <>
-            {meteors.map((el, idx) => (
+            {meteors.map((_, idx) => (
                 <span
                     key={"meteor" + idx}
                     className={cn(

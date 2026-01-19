@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, type ReactNode } from "react";
 import { cn } from "../../../lib/utils";
 
 interface MagicCardProps {
-    children: React.ReactNode;
+    children: ReactNode;
     className?: string;
     gradientSize?: number;
     gradientColor?: string;

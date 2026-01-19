@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, type ReactNode } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRef } from "react";
 import { cn } from "../../../lib/utils";
@@ -8,7 +8,7 @@ export const Cover = ({
     children,
     className,
 }: {
-    children?: React.ReactNode;
+    children?: ReactNode;
     className?: string;
 }) => {
     const [hovered, setHovered] = useState(false);

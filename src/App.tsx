@@ -50,7 +50,7 @@ export default function App() {
             {/* Vortex Background */}
             <Vortex
                 backgroundColor="transparent"
-                rangeY={800}
+
                 particleCount={500}
                 baseHue={45}
                 className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"

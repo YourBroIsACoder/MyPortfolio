@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 import { cn } from "../../../lib/utils";
 
 interface DecryptedTextProps {
@@ -22,9 +22,6 @@ export const DecryptedText: React.FC<DecryptedTextProps> = ({
     text,
     speed = 50,
     maxIterations = 10,
-    sequential = false,
-    revealDirection = "start",
-    useOriginalCharsOnly = false,
     characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()_+",
     className = "",
     parentRef,
@@ -32,16 +29,14 @@ export const DecryptedText: React.FC<DecryptedTextProps> = ({
     encryptedClassName = "",
 }) => {
     const [displayText, setDisplayText] = useState<string>(text);
-    const [isHovering, setIsHovering] = useState<boolean>(false);
     const [isScrambling, setIsScrambling] = useState<boolean>(false);
-    const revealedIndices = useRef<Set<number>>(new Set());
     const intervalRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     const ref = useRef<HTMLSpanElement>(null);
     const isInView = useInView(ref, { once: true, margin: "-10%" });
 
     useEffect(() => {
-        let interval: ReturnType<typeof setTimeout>;
+
 
         // Auto-trigger on view if animateOn is 'view'
         if (animateOn === "view" && isInView && !isScrambling) {
@@ -60,10 +55,9 @@ export const DecryptedText: React.FC<DecryptedTextProps> = ({
 
         if (animateOn === "hover" && parent) {
             const handleMouseEnter = () => {
-                setIsHovering(true);
                 if (!isScrambling) scramble();
             };
-            const handleMouseLeave = () => setIsHovering(false);
+            const handleMouseLeave = () => { };
 
             parent.addEventListener("mouseenter", handleMouseEnter);
             parent.addEventListener("mouseleave", handleMouseLeave);

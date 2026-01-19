@@ -8,7 +8,7 @@ interface VortexProps {
     className?: string;
     containerClassName?: string;
     particleCount?: number;
-    rangeY?: number;
+
     baseHue?: number;
     baseSpeed?: number;
     rangeSpeed?: number;
@@ -24,7 +24,7 @@ export const Vortex = ({
     className,
     containerClassName,
     particleCount = 700,
-    rangeY = 100,
+
     baseHue = 220,
     baseSpeed = 0.0,
     rangeSpeed = 1.5,
@@ -108,7 +108,7 @@ export const Vortex = ({
             const { width, height } = canvas;
             const p = particleProps;
 
-            const i2 = 1 + i, i3 = 2 + i, i4 = 3 + i, i5 = 4 + i, i6 = 5 + i, i7 = 6 + i, i8 = 7 + i, i9 = 8 + i;
+            const i2 = 1 + i, i3 = 2 + i, i4 = 3 + i, i5 = 4 + i, i6 = 5 + i, i7 = 6 + i;
 
             let n;
             // Vortex flow field
@@ -121,7 +121,7 @@ export const Vortex = ({
             // Calculate angle from center for vortex effect
             const dx = x - center[0];
             const dy = y - center[1];
-            const dist = Math.sqrt(dx * dx + dy * dy);
+
             const angle = Math.atan2(dy, dx);
 
             // Swirl force: Tangential to the circle + slightly inwards/outwards + noise

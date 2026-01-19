@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../../lib/utils";
 
@@ -10,7 +10,7 @@ export const PinContainer = ({
     className,
     containerClassName,
 }: {
-    children: React.ReactNode;
+    children: ReactNode;
     title?: string;
     href?: string;
     className?: string;

@@ -1,22 +1,21 @@
 "use client";
-import React, { useRef } from "react";
+import { useRef, useState, useEffect, type ReactNode } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
-import { cn } from "../../../lib/utils";
 
 export const ContainerScroll = ({
     titleComponent,
     children,
 }: {
-    titleComponent: string | React.ReactNode;
-    children: React.ReactNode;
+    titleComponent: string | ReactNode;
+    children: ReactNode;
 }) => {
     const containerRef = useRef<any>(null);
     const { scrollYProgress } = useScroll({
         target: containerRef,
     });
-    const [isMobile, setIsMobile] = React.useState(false);
+    const [isMobile, setIsMobile] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         const checkMobile = () => {
             setIsMobile(window.innerWidth <= 768);
         };

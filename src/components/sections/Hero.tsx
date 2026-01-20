@@ -56,7 +56,7 @@ export const Hero = () => {
                         className="flex gap-4"
                     >
                         <ShimmerButton href="#work">View Work</ShimmerButton>
-                        <a href="/resume.pdf" download className="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-white hover:bg-white/10 transition-colors text-sm font-medium backdrop-blur-sm">
+                        <a href="/CV_Akshath_Narvekar.pdf" download className="px-6 py-3 rounded-full border border-white/10 bg-white/5 text-white hover:bg-white/10 transition-colors text-sm font-medium backdrop-blur-sm">
                             Download Resume
                         </a>
                         <a href="https://github.com/AkshathNarvekar02" target="_blank" title="GitHub" className="p-3 text-neutral-400 hover:text-white transition-colors border border-transparent hover:border-white/10 rounded-full">

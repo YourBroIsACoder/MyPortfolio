@@ -74,7 +74,9 @@ export default function App() {
                         titleComponent={
                             <div className="flex flex-col items-center">
                                 <h2 className="text-4xl md:text-8xl font-display italic text-white mb-6">Featured Implementations</h2>
-                                <p className="text-neutral-400 max-w-2xl mx-auto text-lg mb-20">Exploring the depths of system architecture and agentic workflows.</p>
+                                <p className="text-neutral-400 max-w-2xl mx-auto text-lg mb-20">
+                                    While working at <span className="text-amber-400 font-medium">Agnel CyberCell</span>, I made the club's official website. To have a look, click !!
+                                </p>
                             </div>
                         }
                     >
@@ -104,6 +106,7 @@ export default function App() {
                         { title: "Work", icon: <Icons.Briefcase className="w-full h-full text-neutral-300" />, href: "#work" },
                         { title: "Skills", icon: <Icons.Cpu className="w-full h-full text-neutral-300" />, href: "#skills" },
                         { title: "About", icon: <Icons.User className="w-full h-full text-neutral-300" />, href: "#about" },
+                        { title: "Resume", icon: <Icons.FileText className="w-full h-full text-neutral-300" />, href: "/CV_Akshath_Narvekar.pdf", download: true },
                         { title: "Mail", icon: <Icons.Mail className="w-full h-full text-neutral-300" />, href: "https://mail.google.com/mail/?view=cm&fs=1&to=akshath.narvekar02@gmail.com" },
                         { title: "LinkedIn", icon: <Icons.Linkedin className="w-full h-full text-neutral-300" />, href: "https://www.linkedin.com/in/akshath-narvekar" },
                         { title: "GitHub", icon: <Icons.Github className="w-full h-full text-neutral-300" />, href: "https://github.com/AkshathNarvekar02" },
